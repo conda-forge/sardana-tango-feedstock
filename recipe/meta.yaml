@@ -1,13 +1,13 @@
 {% set name = "sardana-tango" %}
-{% set version = "0.0.3" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ALBA-Synchrotron/sardana-tango/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 98085be8e9f16474bfb19e632f7a50678369fdf65536a9ab3116508a54e60d83
+  url: https://github.com/ALBA-Synchrotron/sardana-tango/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 565195e2d67ddbe40d355760a9f4896583111f26f78a5af03597ab134ad467ec
 
 build:
   noarch: python
