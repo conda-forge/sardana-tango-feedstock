@@ -1,11 +1,11 @@
-About sardana-tango
-===================
+About sardana-tango-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sardana-tango-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ALBA-Synchrotron/sardana-tango
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sardana-tango-feedstock/blob/main/LICENSE.txt)
 
 Summary: Sardana Tango plugins
 
