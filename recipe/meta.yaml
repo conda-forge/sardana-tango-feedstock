@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/sardana-org/sardana-tango/-/archive/{{ version }}/sardana-tango-{{ version }}.tar.gz
-  sha256: 9574a5d78ee00c281083469953e0e7b6b6cdc7f3867575fcb9b698208bd54538
+  sha256: 708f5cc74f5bb09cf499f385dfc64b14e98dca45cdcc89f94ea395e703fb6cdd
 
 build:
   noarch: python
