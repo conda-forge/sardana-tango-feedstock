@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ALBA-Synchrotron/sardana-tango/archive/refs/tags/{{ version }}.tar.gz
+  url: https://gitlab.com/sardana-org/sardana-tango/-/archive/{{ version }}/sardana-tango-{{ version }}.tar.gz
   sha256: 9574a5d78ee00c281083469953e0e7b6b6cdc7f3867575fcb9b698208bd54538
 
 build:
@@ -38,7 +38,7 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://github.com/ALBA-Synchrotron/sardana-tango
+  home: https://gitlab.com/sardana-org/sardana-tango
   summary: Sardana Tango plugins
   license: GPL-3.0-or-later
   license_file: LICENSE
