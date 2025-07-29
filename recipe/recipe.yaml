@@ -24,7 +24,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - sardana
+    - sardana-core
     - pytango
 
 tests:
@@ -35,13 +35,8 @@ tests:
         - sardana_tango.ctrl.TangoAttrIORCtrl
         - sardana_tango.ctrl.TangoAttrMotorCtrl
         - sardana_tango.ctrl.TangoAttrZeroDCtrl
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      python_version: ["${{ python_min }}.*", "3.*"]
+      pip_check: true
 
 about:
   summary: Sardana Tango plugins
