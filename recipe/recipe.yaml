@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: sardana-tango
+  version: 0.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/sardana-org/sardana-tango/-/archive/${{ version }}/sardana-tango-${{ version }}.tar.gz
+  sha256: 708f5cc74f5bb09cf499f385dfc64b14e98dca45cdcc89f94ea395e703fb6cdd
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - sardana
+    - pytango
+
+tests:
+  - python:
+      imports:
+        - sardana_tango
+        - sardana_tango.ctrl.TangoAttrCTCtrl
+        - sardana_tango.ctrl.TangoAttrIORCtrl
+        - sardana_tango.ctrl.TangoAttrMotorCtrl
+        - sardana_tango.ctrl.TangoAttrZeroDCtrl
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Sardana Tango plugins
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://gitlab.com/sardana-org/sardana-tango
+
+extra:
+  recipe-maintainers:
+    - rhomspuron
+    - beenje
