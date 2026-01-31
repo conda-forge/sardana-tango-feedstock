@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sardana-tango
-  version: 0.3.0
+  version: "0.4.0"
   pypi_name: ${{ name | replace('-', '_') }}
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ pypi_name }}-${{ version }}.tar.gz
-  sha256: a0d913cabc0588f3157613c62de194b2f91bda9eb2661e9a65cc4ea754231d83
+  sha256: a62ccbbf1864249883e1a3c6147e69a10f919589d72b16a90f2d6bedfca76a13
 
 build:
   number: 0
